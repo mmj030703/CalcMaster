@@ -1,8 +1,9 @@
-# React + Vite
+# CalcMaster
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How it works?
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Using the button below, the user can fetch random values from the backend.
+- The user can calculate the total by manually entering the quantity or price.
+- Profit is just to mention; it remains the same.
+- If the user manipulates the total or profit, it does not change the other fields.
+- The random values do not calculate the total; it only happens when the user does it manually.
