@@ -10,7 +10,9 @@ function App() {
   });
 
   async function getRandomValues() {
-    const res = await fetch("http://localhost:3000/get-random-values");
+    const res = await fetch(
+      "https://calcmaster.onrender.com/get-random-values"
+    );
     const resJson = await res.json();
 
     setFormData(resJson.data);
