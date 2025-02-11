@@ -17,7 +17,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/get-random-values", getRandomValues);
-app.get('/reload', (req, res) => { console.log("Server Reloaded") });
 
 function getRandomValues(req, res) {
     const randomValues = {
@@ -29,20 +28,3 @@ function getRandomValues(req, res) {
 
     res.status(200).send({ message: "Successfully fetched random values !", data: randomValues });
 }
-
-////////////////////////////////////////////////////////
-const url = `https://calcmaster.onrender.com/reload`;
-const interval = 200000;
-
-//Reloader Function
-function reloadWebsite() {
-    fetch(url)
-        .then(response => {
-            console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
-        })
-        .catch(error => {
-            console.error(`Error reloading at ${new Date().toISOString()}:`, error.message);
-        });
-}
-
-setInterval(reloadWebsite, interval);
