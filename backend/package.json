@@ -6,13 +6,16 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify deploy --prod"
   },
   "author": "Mayank M Jain",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "netlify-cli": "^18.1.0",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^3.1.9",
+    "serverless-http": "^3.2.0"
   }
 }
