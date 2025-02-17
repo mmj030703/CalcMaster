@@ -11,7 +11,7 @@ function App() {
 
   async function getRandomValues() {
     const res = await fetch(
-      "https://calcmaster.onrender.com/get-random-values"
+      "https://calcmaster-mmj030703.netlify.app/.netlify/functions/index/get-random-values"
     );
     const resJson = await res.json();
 
