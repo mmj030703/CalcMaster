@@ -34,5 +34,5 @@ router.get("/get-random-values", (req, res) => {
 });
 
 // Export Netlify Handler
-app.use("/.netlify/functions/api", router);
+app.use("/.netlify/functions/index", router);
 module.exports.handler = serverless(app);
