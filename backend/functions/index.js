@@ -3,6 +3,7 @@ const cors = require("cors");
 const serverless = require("serverless-http");
 
 const app = express();
+const router = express.Router();
 
 // CORS Configuration
 const corsOptions = {
@@ -18,7 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Route
-app.get("/.netlify/functions/api/get-random-values", (req, res) => {
+router.get("/get-random-values", (req, res) => {
   const randomValues = {
     quantity: Math.floor(Math.random() * 100),
     price: Math.floor(Math.random() * 1000),
@@ -33,4 +34,5 @@ app.get("/.netlify/functions/api/get-random-values", (req, res) => {
 });
 
 // Export Netlify Handler
+app.use("/.netlify/functions/api", router);
 module.exports.handler = serverless(app);
